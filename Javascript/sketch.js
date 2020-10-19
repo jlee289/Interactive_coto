@@ -1,21 +1,18 @@
 
-
-
-let lainGIF;
-
+let ichigo;
 
 function preload(){
-lain = loadImage("images/Lain.gif");
+ichigo = loadImage("waiting_tv.gif");
+
 
 }
-
 
 function setup() {
   // put setup code here to run once
 
 
   // create canvas 500 by 500 px:
-  createCanvas(windowWidth,windowHeight);
+  createCanvas(windowWidth, windowHeight);
 
 
 //print(windowWidth)
@@ -23,14 +20,10 @@ function setup() {
 rectMode(CENTER);
 imageMode(CENTER);
 
-
 }
 
 function draw() {
   background(100,40,130);
-
-image(lain, windowWidth/2, windowHeight/2);
-
 
   smooth();
 //style for ellipse
@@ -60,5 +53,8 @@ strokeWeight(10);
 //point is only x and y cordinate
 print(mouseX, mouseY);
 print(mouseX);
+
+image(ichigo, windowWidth/2, windowHeight/2, 400, 50);
+
 
 }
