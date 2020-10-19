@@ -1,6 +1,15 @@
 
 
 
+let lainGIF;
+
+
+function preload(){
+lain = loadImage("images/Lain.gif");
+
+}
+
+
 function setup() {
   // put setup code here to run once
 
@@ -8,16 +17,24 @@ function setup() {
   // create canvas 500 by 500 px:
   createCanvas(windowWidth,windowHeight);
 
-  background(110, 0, 0);
+
 //print(windowWidth)
 //change rectangle x,y cordinates to the center of the rect
 rectMode(CENTER);
+imageMode(CENTER);
+
+
 }
 
 function draw() {
+  background(100,40,130);
+
+image(lain, windowWidth/2, windowHeight/2);
+
+
   smooth();
 //style for ellipse
-
+noStroke();
   // put drawing code here to run in a loop
 ellipse(mouseX, mouseY, 100, 200);
 
