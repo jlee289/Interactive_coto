@@ -1,10 +1,15 @@
+let ellipseX = 0;
+let ellipseY = 0;
 
-let ichigo;
+let pointX = 100;
+let pointY= 200;
+
+let waiting;
+let shin;
 
 function preload(){
-ichigo = loadImage("waiting_tv.gif");
-
-
+  waiting = createImg("images/waiting_tv.gif");
+  shin = createImg("images/SHIN_CHAN.gif");
 }
 
 function setup() {
@@ -20,6 +25,10 @@ function setup() {
 rectMode(CENTER);
 imageMode(CENTER);
 
+ellipseX = random(ellipseX, windowWidth);
+ellipseY = random(ellipseY, windowHeight);
+
+noCursor();
 }
 
 function draw() {
@@ -27,7 +36,7 @@ function draw() {
 
   smooth();
 //style for ellipse
-noStroke();
+
   // put drawing code here to run in a loop
 ellipse(mouseX, mouseY, 100, 200);
 
@@ -45,7 +54,6 @@ fill(179, 212, 245);
 triangle(1200,50,1300,600,mouseX,mouseY);
 
 
-
 //styles for the points
 fill(255, 233, 69);
 stroke(109, 83, 224);
@@ -54,7 +62,10 @@ strokeWeight(10);
 print(mouseX, mouseY);
 print(mouseX);
 
-image(ichigo, windowWidth/2, windowHeight/2, 400, 50);
+strokeWeight(10)
+line(pointX, pointY, 700, 500);
+waiting.position(600, 600);
 
+image(shin, mouseX, mouseY, 200, 200);
 
 }
