@@ -1,6 +1,6 @@
 var stars = [],
-    WIDTH = window.innerWidth,
-    HEIGHT = window.innerHeight,
+    WIDTH = window.outerWidth,
+    HEIGHT = window.outerHeight,
     FPS = 10, // Frames per second
     NUM_STARS = WIDTH/10; // Number of stars
 
@@ -28,13 +28,13 @@ function setup() {
 }
 
 function draw() {
-  background(0);
+  background(1);
   push(10);
-  noFill(1);
-  colorMode(RGB, 124, 156, 128);
-  stroke(25,209,227,1);
-  strokeCap(SQUARE);
-  strokeWeight(5);
+  noFill(8);
+  colorMode(RGB, 214, 0, 0);
+  stroke(250,29,47,1);
+  strokeCap(PROJECT);
+  strokeWeight(1);
   for (var i = 0, x = stars.length; i < x; i++) {
     var s = stars[i];
     ellipse(s.x, s.y, s.radius, s.otherradius);
@@ -42,18 +42,18 @@ function draw() {
   let detailY;
   function setup() {
     createCanvas(100, 100, WEBGL);
-    detailY = createSlider(3, 16, 3);
+    detailY = createSlider(3, 20, 3);
     detailY.position(10, height + 5);
     detailY.style('width', '80px');
   }
 
   function draw() {
     background(205, 102, 94);
-    rotateY(millis() / 100);
-    cone(300, 65, 16, detailY.value());
+    rotateY(millis() / 1000);
+    cone(600, 30, 16, detailY.value());
   }
 var planetX = 1500;
-var planetY = 20;
+var planetY = 10;
 
   if ((mouseX > windowWidth / 2 - planetX /2) && (mouseX < windowWidth / 2 + planetX / 2) && (mouseY > windowHeight / 2 - planetY / 2) && (mouseY < windowHeight / 2 + planetY /2)) {
     fill(color(73,62,99));
@@ -63,11 +63,11 @@ var planetY = 20;
     // print(s.radius);
     s.radius = s.radius + 200;
     s.otherradius = s.radius;
-    FPS = 500;
+    FPS = 1000;
     frameRate(FPS);
     print(FPS);
     // print(frameRate(FPS));
-    colorMode(RGB, 10, 10, 123, 1);
+    colorMode(RGB, 100, 20, 123, 1);
   } else {
     var s = (stars);
     // s.radius = Math.random() * 2;
@@ -86,7 +86,7 @@ function update() {
   var originX = WIDTH / 2;
   var originY = HEIGHT / 2;
 
-  for (var i = 0, x = stars.length; i < x; i++) {
+  for (var i = 0 , x = stars.length; i < x; i++) {
     var s = stars[i];
 
 
@@ -99,8 +99,8 @@ function update() {
 }
 
 function windowResized() {
-    WIDTH = window.innerWidth,
-    HEIGHT = window.innerHeight,
+    WIDTH = window.outerWidth,
+    HEIGHT = window.outerHeight,
     resizeCanvas(WIDTH, HEIGHT);
 }
 

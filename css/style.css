@@ -6,8 +6,11 @@
 
 }
 
+div#myDIV {
+  backface-visibility:visible;
+}
+
 html{
-  background-color:none;
   font-family:'Robot Children'
 }
 
