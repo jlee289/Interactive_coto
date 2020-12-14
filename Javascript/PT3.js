@@ -29,35 +29,35 @@ function setup() {
 
 function draw() {
   background(1);
-  push(10);
+  push(20);
   noFill(8);
-  colorMode(RGB, 214, 0, 0);
+  colorMode(RGB, 214, 10, 12);
   stroke(250,29,47,1);
   strokeCap(ROUND);
   for (var i = 0, x = stars.length; i < x; i++) {
     var s = stars[i];
-    ellipse(s.x, s.y, s.radius, s.otherradius);
+   rect(s.x, s.y, s.radius, s.otherradius);
   }
   let detailY;
   function setup() {
     createCanvas(100, 100, WEBGL);
-    rect(20, 20, 60, 80)
+    rect(20, 10, 60, 80)
     detailY = createSlider(3, 20, 3);
     detailY.position(10, height + 5);
     detailY.style('width', '80px');
   }
 
   function draw() {
-    background(205, 102, 94);
-    rotateY(millis() / 1000);
+    background(220,100,20);
+    rotateY(millis() / 100);
     cone(600, 30, 16, detailY.value());
   }
-var planetX = 1500;
-var planetY = 10;
+var planetX = (5000,250);
+var planetY = (1000,250);
 
-  if ((mouseX > windowWidth / 2 - planetX /2) && (mouseX < windowWidth / 2 + planetX / 2) && (mouseY > windowHeight / 2 - planetY / 2) && (mouseY < windowHeight / 2 + planetY /2)) {
-    fill(color(73,62,99));
-    noStroke(10);
+  if ((mouseX > windowWidth / 10 - planetX /3) && (mouseX < windowWidth / 3 + planetX / 3) && (mouseY > windowHeight / 3 - planetY / 3) && (mouseY < windowHeight / 3 + planetY /3)) {
+    fill(color(209, 129, 123));
+    noStroke(20);
     ellipse(windowWidth/2, windowHeight/2 ,planetX,planetY);
     var s = random(stars);
     // print(s.radius);
@@ -67,7 +67,7 @@ var planetY = 10;
     frameRate(FPS);
     print(FPS);
     // print(frameRate(FPS));
-    colorMode(RGB, 100, 20, 123, 1);
+    colorMode(RGB, 120, 20, 13, 1);
   } else {
     var s = (stars);
     // s.radius = Math.random() * 2;
