@@ -47,16 +47,11 @@ function draw() {
     detailY.style('width', '80px');
   }
 
-  function draw() {
-    background(205, 102, 94);
-    rotateY(millis() / 1000);
-    cone(600, 30, 16, detailY.value());
-  }
 var planetX = 1500;
 var planetY = 10;
 
   if ((mouseX > windowWidth / 2 - planetX /2) && (mouseX < windowWidth / 2 + planetX / 2) && (mouseY > windowHeight / 2 - planetY / 2) && (mouseY < windowHeight / 2 + planetY /2)) {
-    fill(color(73,62,99));
+    fill(color(123,62,99));
     noStroke(10);
     ellipse(windowWidth/2, windowHeight/2 ,planetX,planetY);
     var s = random(stars);

@@ -30,11 +30,11 @@ function setup() {
 }
 
 function draw() {
-  background(225,204,100);
-  push(0);
+  background(25,204,100);
+  push(10);
   noFill(2);
   colorMode(HSB);
-  stroke(200,80,47,10);
+  stroke(10,830,47,80);
   strokeCap(SQUARE);
   for (var i = 0, x = stars.length; i < x; i++) {
     var s = stars[i];
@@ -44,8 +44,8 @@ function draw() {
 var planetX = (200,250);
 var planetY = (200,250);
 
-  if ((mouseX > windowWidth / 10 - planetX /4) && (mouseX < windowWidth / 4 + planetX / 4) && (mouseY > windowHeight / 4 - planetY / 4) && (mouseY < windowHeight / 4 + planetY /4)) {
-    fill(color(209, 129, 123));
+  if ((mouseX > windowWidth / 4 - planetX /4) && (mouseX < windowWidth / 4 + planetX / 4) && (mouseY > windowHeight / 4 - planetY / 4) && (mouseY < windowHeight / 4 + planetY /4)) {
+    fill(color(70, 129, 123));
     noStroke(0);
     ellipse(windowWidth/2, windowHeight/2 ,planetX/2 ,planetY/2);
     var s = random(stars);
