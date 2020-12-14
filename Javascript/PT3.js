@@ -45,9 +45,9 @@ var planetX = (200,250);
 var planetY = (200,250);
 
   if ((mouseX > windowWidth / 4 - planetX /4) && (mouseX < windowWidth / 4 + planetX / 4) && (mouseY > windowHeight / 4 - planetY / 4) && (mouseY < windowHeight / 4 + planetY /4)) {
-    fill(color(70, 129, 123));
+    fill(color(380, 159, 123, 1));
     noStroke(0);
-    ellipse(windowWidth/2, windowHeight/2 ,planetX/2 ,planetY/2);
+    ellipse(windowWidth/5, windowHeight/2 ,planetX/2 ,planetY/2);
     var s = random(stars);
     // print(s.radius);
     s.radius = s.radius + 500;
@@ -105,6 +105,6 @@ function windowResized() {
 
 function mousePressed () {
   // var s = s
-  colorMode(RGB,100,200,200,1);
+  colorMode(RGB,10,280,350,1);
 
 }
